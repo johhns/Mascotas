@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mascota">
+>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvMascota"
@@ -34,12 +34,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/btnHueso"
-                    android:layout_width="10sp"
-                    android:layout_height="47dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/hueso_blanco" />
+
 
                 <TextView
                     android:id="@+id/txtNombre"
@@ -58,12 +53,7 @@
                     android:text="5"
                     android:textAlignment="viewEnd" />
 
-                <ImageButton
-                    android:id="@+id/btnRating"
-                    android:layout_width="10dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/hueso_amarillo" />
+
 
             </LinearLayout>
 
