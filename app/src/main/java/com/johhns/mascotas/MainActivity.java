@@ -18,27 +18,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toast.makeText( this, "cero", Toast.LENGTH_LONG).show();
+
         setContentView(R.layout.activity_main);
-Toast.makeText( this, "uno", Toast.LENGTH_LONG).show();
+
         arrayMascotas = new ArrayList<>();
-        Toast.makeText( this, "dos", Toast.LENGTH_LONG).show();
         recView = (RecyclerView) findViewById(R.id.rcView1) ;
-        Toast.makeText( this, "tres", Toast.LENGTH_LONG).show();
         recView.setLayoutManager(new LinearLayoutManager(this));
 
         crear_mascotas();
-        Toast.makeText( this, "cuatro", Toast.LENGTH_LONG).show();
-        Adaptador adaptador = new Adaptador(arrayMascotas);
-        recView.setAdapter(adaptador);
-        Toast.makeText( this, "cinco", Toast.LENGTH_LONG).show();
 
+        Adaptador adapter = new Adaptador(arrayMascotas);
+        recView.setAdapter(adapter);
 
     }
 
     private void crear_mascotas() {
         arrayMascotas.add( new Mascota( R.drawable.lazy , "Lazy" , 7 ) ) ;
-        arrayMascotas.add( new Mascota( R.drawable.manchas , "Mancjas" , 5 ) ) ;
+        arrayMascotas.add( new Mascota( R.drawable.manchas , "Manchas" , 5 ) ) ;
         arrayMascotas.add( new Mascota( R.drawable.oso , "Oso" , 2 ) ) ;
         arrayMascotas.add( new Mascota( R.drawable.peluchin , "Peluchin" , 5 ) ) ;
         arrayMascotas.add( new Mascota( R.drawable.punky , "Punky" , 4 ) ) ;

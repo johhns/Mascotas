@@ -7,7 +7,9 @@ public class Mascota  {
     private String nombre ;
     private int rating ;
 
-
+    public Mascota(String nombre) {
+        this.nombre = nombre;
+    }
 
     public Mascota(int foto, String nombre, int rating) {
         this.foto = foto;
