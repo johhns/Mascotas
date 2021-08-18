@@ -1,11 +1,18 @@
 package com.johhns.mascotas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.Toast;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
@@ -13,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Mascota> arrayMascotas ;
     RecyclerView       recView ;
-
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+  /*      toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null){
+            setSupportActionBar(toolbar);
+        }
+*/
         arrayMascotas = new ArrayList<>();
         recView = (RecyclerView) findViewById(R.id.rcView1) ;
         recView.setLayoutManager(new LinearLayoutManager(this));
@@ -40,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
         arrayMascotas.add( new Mascota( R.drawable.rex , "Rex" , "3" ) ) ;
         arrayMascotas.add( new Mascota( R.drawable.rocky , "Rocky" , "5" ) ) ;
         arrayMascotas.add( new Mascota( R.drawable.romi , "Romy" , "4" ) ) ;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_opciones, menu);
+        return true;
     }
 
 

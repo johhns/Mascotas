@@ -1,53 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cvMascota"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:animateLayoutChanges="true"
-        android:elevation="5dp"
-        app:cardCornerRadius="5dp"
-        android:paddingBottom="3dp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintTop_toTopOf="parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMascota"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="4dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginTop="3dp"
+    >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        >
 
-        <LinearLayout
-            android:layout_width="fill_parent"
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:src="@drawable/lazy">
+        </ImageView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            >
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnLike"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/hueso_blanco2"
+                >
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/txtNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/imgRateCV"
+                android:text="0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imgFoto"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="5dp"
-                android:src="@drawable/lazy" />
+                android:id="@+id/imgRateCV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/hueso_amarillo2"
+                android:layout_alignParentEnd="true"
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                >
 
+            </ImageView>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/txtNombre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rocky" />
-
-                <TextView
-                    android:id="@+id/txtRating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="5" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-
- </androidx.cardview.widget.CardView>
 
