@@ -33,14 +33,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void crear_mascotas() {
-        arrayMascotas.add( new Mascota( R.drawable.lazy , "Lazy" , 7 ) ) ;
-        arrayMascotas.add( new Mascota( R.drawable.manchas , "Manchas" , 5 ) ) ;
-        arrayMascotas.add( new Mascota( R.drawable.oso , "Oso" , 2 ) ) ;
-        arrayMascotas.add( new Mascota( R.drawable.peluchin , "Peluchin" , 5 ) ) ;
-        arrayMascotas.add( new Mascota( R.drawable.punky , "Punky" , 4 ) ) ;
-        arrayMascotas.add( new Mascota( R.drawable.rex , "Rex" , 3 ) ) ;
-        arrayMascotas.add( new Mascota( R.drawable.rocky , "Rocky" , 5 ) ) ;
-        arrayMascotas.add( new Mascota( R.drawable.romi , "Romy" , 4 ) ) ;
+        arrayMascotas.add( new Mascota( R.drawable.lazy , "Lazy" , "7" ) ) ;
+        arrayMascotas.add( new Mascota( R.drawable.manchas , "Manchas" , "5" ) ) ;
+        arrayMascotas.add( new Mascota( R.drawable.oso , "Oso" , "2" ) ) ;
+        arrayMascotas.add( new Mascota( R.drawable.punky , "Punky" , "4" ) ) ;
+        arrayMascotas.add( new Mascota( R.drawable.rex , "Rex" , "3" ) ) ;
+        arrayMascotas.add( new Mascota( R.drawable.rocky , "Rocky" , "5" ) ) ;
+        arrayMascotas.add( new Mascota( R.drawable.romi , "Romy" , "4" ) ) ;
     }
 
 
