@@ -31,7 +31,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
        holder.v_foto.setImageResource( aMascotas.get(position).getFoto() );
        holder.v_nombre.setText( aMascotas.get(position).getNombre() );
-       holder.v_rating.setText( aMascotas.get(position).getRating() );
+       holder.v_rating.setText( String.valueOf( aMascotas.get(position).getRating() ) );
     }
 
     @Override

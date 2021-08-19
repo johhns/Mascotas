@@ -5,13 +5,10 @@ public class Mascota  {
 
     private int foto ;
     private String nombre ;
-    private String rating ;
+    private int rating ;
 
-    public Mascota(String nombre) {
-        this.nombre = nombre;
-    }
 
-    public Mascota(int foto, String nombre, String rating) {
+    public Mascota(int foto, String nombre, int rating) {
         this.foto = foto;
         this.nombre = nombre;
         this.rating = rating;
@@ -33,11 +30,11 @@ public class Mascota  {
         this.nombre = nombre;
     }
 
-    public String getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(int rating) {
         this.rating = rating;
     }
 }
