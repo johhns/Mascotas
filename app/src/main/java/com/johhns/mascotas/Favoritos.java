@@ -1,11 +1,11 @@
 package com.johhns.mascotas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
@@ -21,7 +21,7 @@ public class Favoritos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritos);
 
-        androidx.appcompat.widget.Toolbar tulbar = (androidx.appcompat.widget.Toolbar) findViewById( R.id.toolbar1 ) ;
+        Toolbar tulbar = findViewById( R.id.miActionBar ) ;
         setSupportActionBar(tulbar);
 
         aMascotas = new ArrayList<>() ;

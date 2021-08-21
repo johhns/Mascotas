@@ -5,17 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
@@ -23,17 +18,17 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Mascota> arrayMascotas ;
     RecyclerView       recView ;
-    private Toolbar toolbar;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar1);
+        toolbar = findViewById(R.id.toolbar1);
+
         if (toolbar != null){
-            setSupportActionBar(toolbar);
+         setSupportActionBar(toolbar);
         }
 
         arrayMascotas = new ArrayList<>();
@@ -44,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         Adaptador adapter = new Adaptador(arrayMascotas);
         recView.setAdapter(adapter);
+
 
     }
 
@@ -64,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -74,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 
 }

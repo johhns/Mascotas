@@ -3,6 +3,7 @@ package com.johhns.mascotas;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,6 +33,16 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
        holder.v_foto.setImageResource( aMascotas.get(position).getFoto() );
        holder.v_nombre.setText( aMascotas.get(position).getNombre() );
        holder.v_rating.setText( String.valueOf( aMascotas.get(position).getRating() ) );
+       holder.v_boton.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               int cantidad ;
+               cantidad = aMascotas.get(position).getRating() + 1;
+               aMascotas.get(position).setRating(cantidad);
+               holder.v_rating.setText( String.valueOf( aMascotas.get(position).getRating() ) );
+           }
+       });
+
     }
 
     @Override
@@ -44,12 +55,14 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
         ImageView v_foto ;
         TextView  v_nombre, v_rating ;
+        ImageButton v_boton ;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             v_foto   = itemView.findViewById(R.id.imgFoto) ;
             v_nombre = itemView.findViewById(R.id.txtNombre) ;
             v_rating = itemView.findViewById(R.id.txtRating) ;
+            v_boton = itemView.findViewById(R.id.btnLike);
         }
     }
 }
