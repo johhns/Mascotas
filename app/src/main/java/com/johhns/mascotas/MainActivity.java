@@ -18,17 +18,17 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Mascota> arrayMascotas ;
     RecyclerView       recView ;
-    Toolbar toolbar;
+    Toolbar toolbar_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbar1);
+        toolbar_main = findViewById(R.id.toolbar1);
 
-        if (toolbar != null){
-         setSupportActionBar(toolbar);
+        if (toolbar_main != null){
+         setSupportActionBar(toolbar_main);
         }
 
         arrayMascotas = new ArrayList<>();

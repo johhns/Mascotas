@@ -29,11 +29,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-android:layout_margin="10dp"
+            android:layout_margin="10dp"
             >
             <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:id="@+id/btnLike"
                 android:layout_alignParentLeft="true"
                 android:background="@drawable/hueso_blanco2"
@@ -61,8 +61,8 @@ android:layout_margin="10dp"
 
             <ImageView
                 android:id="@+id/imgRateCV"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/hueso_amarillo2"
                 android:layout_alignParentEnd="true"
 
@@ -71,6 +71,7 @@ android:layout_margin="10dp"
             </ImageView>
         </RelativeLayout>
     </LinearLayout>
+    <!--  -->
 </androidx.cardview.widget.CardView>
 
 

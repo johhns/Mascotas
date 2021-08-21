@@ -21,8 +21,8 @@ public class Favoritos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritos);
 
-        Toolbar tulbar = findViewById( R.id.miActionBar ) ;
-        setSupportActionBar(tulbar);
+        Toolbar barra_acciones = findViewById( R.id.miActionBar ) ;
+        setSupportActionBar(barra_acciones);
 
         aMascotas = new ArrayList<>() ;
         recView = findViewById(R.id.rcView1) ;

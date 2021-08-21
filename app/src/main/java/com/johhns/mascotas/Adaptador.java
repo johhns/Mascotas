@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,9 +38,12 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
            @Override
            public void onClick(View v) {
                int cantidad ;
-               cantidad = aMascotas.get(position).getRating() + 1;
-               aMascotas.get(position).setRating(cantidad);
-               holder.v_rating.setText( String.valueOf( aMascotas.get(position).getRating() ) );
+                String clase = v.getContext().getClass().getName().toString() ;
+                if ( clase.contains("Main") ) {
+                    cantidad = aMascotas.get(position).getRating() + 1;
+                    aMascotas.get(position).setRating(cantidad);
+                    holder.v_rating.setText( String.valueOf( aMascotas.get(position).getRating() ) );
+                }
            }
        });
 
